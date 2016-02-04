@@ -15,3 +15,10 @@ function bar() {
         ...
     };
 }
+
+var someObject = {
+    foo: 'bar',
+    baz: function() {
+        ...
+    }
+};
