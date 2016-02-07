@@ -39,8 +39,10 @@ function parseInt(str) {
     });
     // implement this
     var agg = parts
-        .map(part => keywords[part])
-        .reduce((acc, x) => {
+        .map(function(part) {
+            return keywords[part];
+        })
+        .reduce(function(acc, x) {
             if (x >= 1000) {
                 acc.sum += acc.carry * x;
                 acc.carry = 0;

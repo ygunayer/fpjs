@@ -22,3 +22,7 @@ var someObject = {
         ...
     }
 };
+
+[1, 2, 3].map(function(x) {
+    ...
+});
