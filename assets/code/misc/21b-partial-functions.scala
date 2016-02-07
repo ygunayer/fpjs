@@ -1,4 +1,4 @@
-def abs(x: Int) = x match {
+def abs(x: Int): Int = x match {
 	case n if n < 0 => -n
 	case n if n >= 0 => n
 }
