@@ -1,6 +1,6 @@
 var util = require('util'),
     fs = require('fs'),
-    base = require('./16-monads-try'),
+    base = require('./20c-monads-try'),
     Either = base.Either,
     Left = base.Left,
     Right = base.Right,
@@ -40,6 +40,6 @@ attempt1.map(function(result) {
     console.log('attempt1:', result.toString()); // Failure(Error: ENOENT: no such file or directory, open '/;;;;')
 });
 attempt2.map(function(result) {
-    console.log('attempt2:', result.toString()); // Right([object Object])
+    console.log('attempt2:', result.toString()); // Success([object Object])
 });
 console.log('-- attempt1 and attempt2 will execute after this line (probably)');

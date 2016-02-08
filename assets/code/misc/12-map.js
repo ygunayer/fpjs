@@ -2,7 +2,7 @@ function map(f, arr) {
     var ret = [];
     for (var i = 0; i < arr.length; i++) {
         var number = arr[i];
-        var newNumber = f(arr[i]);
+        var newNumber = f(number);
         ret.push(newNumber);
     }
     return ret;

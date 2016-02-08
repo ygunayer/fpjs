@@ -1,5 +1,5 @@
 var util = require('util'),
-    base = require('./15-monads-either'),
+    base = require('./20b-monads-either'),
     Either = base.Either,
     Left = base.Left,
     Right = base.Right;
@@ -15,7 +15,7 @@ Success.prototype.toString = function() {
 var Failure = function(error) {
     this.error = error;
 };
-util.inherits(Success, Right);
+util.inherits(Failure, Right);
 Failure.prototype.toString = function() {
     return 'Failure(' + this.error.toString() + ')';
 };
@@ -47,7 +47,7 @@ attempt1.map(function(result) {
     console.log('attempt1:', result.toString()); // Failure(ReferenceError: x is not defined)
 });
 attempt2.map(function(result) {
-    console.log('attempt2:', result.toString()); // Right(42)
+    console.log('attempt2:', result.toString()); // Success(42)
 });
 
 module.exports = {
